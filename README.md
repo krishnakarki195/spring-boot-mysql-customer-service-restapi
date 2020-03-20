@@ -1,6 +1,7 @@
 # Customer Service Rest API
 Exercise from class
 Solution by Rob Wing
+
 [Problem details](https://github.com/gSchool/ent-microservice-development/blob/master/units/50-spring-microservice-projects/customer-service-api.md)
 
 ## API Reference
@@ -75,3 +76,6 @@ curl --location --request PATCH 'localhost:8080/api/service/544/resolve' \
 	"resolutionNotes": "You need to put the clothes in the washer, add soap, run the washer, then put the clothes in the dryer."
 }'
 ```
+
+### Postman Docks
+https://documenter.getpostman.com/view/6945911/SzS7R6P5 
