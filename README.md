@@ -5,6 +5,16 @@ Solution by Rob Wing
 - [Exercise details](https://github.com/gSchool/ent-microservice-development/blob/master/units/50-spring-microservice-projects/customer-service-api.md)
 - [API Reference](https://documenter.getpostman.com/view/6945911/SzS7R6P5) 
 
+### Acceptance Criteria
+Build a Customer Service application, where customers can request help for an issue or question.  The data must be persisted
+in a relational database and have the following end points...
+- create new request
+- get all requests
+- get one request by id
+- assign a request to a technician
+- update a request with a note 
+- resolve a request
+
 ### My Development Process
 
 1. Create known entities with known attributes
