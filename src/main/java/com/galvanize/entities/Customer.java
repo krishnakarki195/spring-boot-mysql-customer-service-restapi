@@ -4,20 +4,28 @@ import javax.persistence.*;
 
 @Entity(name = "customers")
 public class Customer {
+
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+
     @Column(name = "first_name")
     String first;
+
     @Column(name = "last_name")
     String last;
+
     @Column(length = 50)
     String address;
+
     @Column(length = 50)
     String city;
+
     @Column(length = 2)
     String state;
+
     @Column(length = 5)
     String zip;
+
     @Column(unique = true)
     String telephone;
 

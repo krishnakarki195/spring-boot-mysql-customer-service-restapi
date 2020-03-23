@@ -14,12 +14,12 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CustSvcService {
+public class CustomerService {
     CustomerRepo customerRepo;
     ServiceNoteRepo noteRepo;
     ServiceTicketRepo ticketRepo;
 
-    public CustSvcService(CustomerRepo customerRepo, ServiceNoteRepo noteRepo, ServiceTicketRepo ticketRepo) {
+    public CustomerService(CustomerRepo customerRepo, ServiceNoteRepo noteRepo, ServiceTicketRepo ticketRepo) {
         this.customerRepo = customerRepo;
         this.noteRepo = noteRepo;
         this.ticketRepo = ticketRepo;

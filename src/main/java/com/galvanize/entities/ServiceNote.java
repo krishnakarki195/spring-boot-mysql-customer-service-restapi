@@ -8,14 +8,18 @@ import java.time.LocalDateTime;
 
 @Entity(name = "service_notes")
 public class ServiceNote {
+
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ticket_id", nullable = false)
     @JsonIgnore
     ServiceTicket serviceTicket;
+
     @Column(columnDefinition = "LONGTEXT")
     String note;
+
     @JsonFormat(pattern = "MM/dd/yyyy HH:mm")
     LocalDateTime createdAt = LocalDateTime.now();
     String createdBy;

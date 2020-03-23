@@ -10,19 +10,31 @@ import java.util.List;
 
 @Entity(name = "service_tickets")
 public class ServiceTicket {
+
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
+
+    @Column(name="problem")
     private String problem;
+
+    @Column(name="technician")
     private String technician;
+
+    @Column(name="status")
     private String status;
+
     @JsonFormat(pattern = "MM/dd/yyyy HH:mm")
     private LocalDateTime requestDate;
+
     private LocalDateTime appointmentDate;
+
     @OneToMany(mappedBy = "serviceTicket", orphanRemoval = true, cascade = CascadeType.ALL)
     List<ServiceNote> notes;
+
     @Column(columnDefinition = "LONGTEXT")
     private String problemDetails;
 

@@ -5,7 +5,7 @@ import com.galvanize.dto.ServiceRequest;
 import com.galvanize.entities.Customer;
 import com.galvanize.entities.ServiceNote;
 import com.galvanize.entities.ServiceTicket;
-import com.galvanize.services.CustSvcService;
+import com.galvanize.services.CustomerService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -17,9 +17,9 @@ import java.util.Optional;
 @RequestMapping("/api/service")
 public class ServiceRequestController {
 
-    final CustSvcService service;
+    final CustomerService service;
 
-    public ServiceRequestController(CustSvcService service) {
+    public ServiceRequestController(CustomerService service) {
         this.service = service;
     }
 

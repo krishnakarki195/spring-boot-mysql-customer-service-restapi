@@ -4,12 +4,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.galvanize.dto.Resolution;
 import com.galvanize.dto.ServiceRequest;
 import com.galvanize.entities.Customer;
-import com.galvanize.entities.ServiceNote;
 import com.galvanize.entities.ServiceTicket;
 import com.galvanize.repositories.CustomerRepo;
 import com.galvanize.repositories.ServiceNoteRepo;
 import com.galvanize.repositories.ServiceTicketRepo;
-import com.galvanize.services.CustSvcService;
+import com.galvanize.services.CustomerService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +18,6 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
 import javax.transaction.Transactional;
-
 import java.time.LocalDateTime;
 
 import static org.hamcrest.Matchers.*;
@@ -39,7 +37,7 @@ class ServiceRequestControllerTest {
     ObjectMapper mapper = new ObjectMapper();
 
     @Autowired
-    CustSvcService service;
+    CustomerService service;
 
     @Autowired
     CustomerRepo customerRepo;

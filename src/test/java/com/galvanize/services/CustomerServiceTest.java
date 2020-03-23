@@ -18,15 +18,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Transactional
-class CustSvcServiceTest {
+class CustomerServiceTest {
 
     @Autowired
     CustomerRepo customerRepo;
 
     @Autowired
-    CustSvcService service;
+    CustomerService service;
 
     Customer testCustomer;
+
     ServiceTicket testTicket;
 
     private static final String PARAGRAPH = "Lorem ipsum dolor sit amet, consectetur " +
